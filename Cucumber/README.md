@@ -1,5 +1,5 @@
-# Testing $$*TODO* software name$$ using Cucumber
-This directory contains the cucumber files for testing the $$*TODO* module name$$ module of the $$*TODO* software name$$ application.
+# Testing OpenCart using Cucumber
+This directory contains the cucumber files for testing the Inventory Management & Purchase Functionality modules of the OpenCart application.
 
 ## Running the tests
 Run ```mvn test``` to run all the tests.
