@@ -2,13 +2,16 @@
  *  This is a good place to put common test data, project-wide constants, etc.
  */
 
-const URLstore = 'http://localhost/opencart/';
-const URLadmin = 'http://localhost/opencart/admin2/';
+const URLstore = 'http://localhost/';
+const URLadmin = 'http://localhost/admin';
 
-const userCredentials = ["keren@test.com", "Quality2025"];
-const adminCredentials = ["admin", "1234"];
+const userCredentials = ["tomer@bgu.com", "12345678"];
+const adminCredentials = ["admin", "admin"];
 
 const chosenProduct = "iPhone";
+const deletedProduct = "Palm Treo Pro";
+
+
 
 
 const xpaths = {
@@ -25,30 +28,86 @@ const xpaths = {
     },
 
     selectProduct: {
-        productLocation: '//*[@id="form-product"]/div[1]/table/tbody/tr[6]/td[1]/input'
-      },
+        productLocation: '//*[@id="form-product"]/div[1]/table/tbody/tr[10]/td[1]/input'
+    },
 
     deleteProduct: {
-      deleteButton: '//*[@id="content"]/div[1]/div/div/button[3]'
+      deleteButton: '//*[@id="content"]/div[1]/div/div/button[3]',
+      okButton: "//button[text()='OK']"
+    },
+
+    ensureDeleted: {
+      searchBox: '//*[@id="input-name"]',
+      submitSearch: '//*[@id="button-filter"]'
+    },
+
+    closeSecuriyWindow: {
+      closeWindow: '//*[@id="modal-security"]/div/div/div[1]/button'
     }
 }
 
 const xpathsu = {
-    search: {
-      searchBox: '//input[@name="search"]',
-      submitSearch: '//form[1]/button[1]'
-    },
+  loginWindow: {
+    accountButton:  '//*[@id="top"]/div/div/div[2]/ul/li[2]/div/a/span',
+    loginButton:  '//*[@id="top"]/div/div/div[2]/ul/li[2]/div/ul/li[2]/a',
+    usernameBox:  '//*[@id="input-email"]',
+    passwordBox:  '//*[@id="input-password"]',
+    submitLogin:  '//*[@id="form-login"]/div[3]/button'
+  },
 
-    searchResults: {
-      addToCartButton: '//form[1]/div[1]/button[1]'
-    },
+  // search: {
+  //   searchBox: '//input[@name="search"]',
+  //   submitSearch: '//form[1]/button[1]'
+  // },
 
-    cart: {
-      cartButton: '//button[@id="header-cart"]/div/button',
-      checkoutButton: '//*[@id="header-cart"]/div/ul/li/div/p/a[2]/strong'
-    },
+  // searchResults: {
+  //   addToCartButton: '//form[1]/div[1]/button[1]'
+  // },
 
-    checkout: {
-      guestCheckoutButton: '//*[@id="content"]/div[3]/div[2]/a' //should not work
-    }
+  cart: {
+    cartButton: '//*[@id="cart"]/div/button',
+    checkoutButton: '//*[@id="cart"]/div/ul/li/div/p/a[2]/strong'
+  },
+
+  checkout: {
+    guestCheckoutButton: '//*[@id="content"]/div[3]/div[2]/a'
+
+  },
+
+  // info: {
+  //     newAddress: '//*[@id="input-shipping-new"]',
+  //     firstName: '//*[@id="input-firstname"]',
+  //     lastName: '//*[@id="input-lastname"]',
+  //     email: '//*[@id="input-email"]',
+  //     address: '//*[@id="input-shipping-address-1"]',
+  //     city: '//*[@id="input-shipping-city"]',
+  //     postcode: '//*[@id="input-shipping-postcode"]',
+  //     country: '//*[@id="input-shipping-country"]',
+  //     state: '//*[@id="input-shipping-zone"]',
+  //     password: '//*[@id="input-password"]',
+  //     confirmOrderButton: '//*[@id="button-register"]',
+  //     privacyPolicyCheckbox: '//*[@id="register-agree"]'
+  // },
+
+  existingInfo: {
+      chooseAddress: '//*[@id="input-shipping-address"]',
+      Address: '//*[@id="input-shipping-address"]/option[2]'
+  },
+
+  shippingMethod: {
+      choose: '//*[@id="button-shipping-methods"]',
+      confirm: '//*[@id="button-shipping-method"]'
+  },
+
+  paymentMethos: {
+      choose: '//*[@id="button-payment-methods"]',
+      confirm: '//*[@id="button-payment-method"]'
+  },
+
+  confirmOrder: {
+      confirm: '//*[@id="button-confirm"]'
+  }
+
+
+
   }
