@@ -1,8 +1,8 @@
-# helloprovengo
+# opencart_testing
 
 ---
-2024-02-19 20:44:26
-User
+2025-01-29 23:48:53
+reuta
 
 Provengo project for spec-ing and testing my system.
 
@@ -28,7 +28,7 @@ Provengo project for spec-ing and testing my system.
 
 ## Useful Commands
 
-⚠️ NOTE: In the below listings, we assume that `provengo` is in the system's PATH variable, and that `C:\Repositories\sqe-system-tesing\Provengo\helloprovengo` is the path to this directory.
+⚠️ NOTE: In the below listings, we assume that `provengo` is in the system's PATH variable, and that `C:\Users\reuta\OneDrive\מסמכים\לימודים\שנה ד\איכות\P\2025-mbt-p\selenium\opencart_testing` is the path to this directory.
 
 For full documentation go to [https://docs.provengo.tech](docs.provengo.tech).
 
@@ -36,14 +36,14 @@ For full documentation go to [https://docs.provengo.tech](docs.provengo.tech).
 
 Perform a single run through the specification. Good for "Sanity checks", i.e. to see examples of what can happen.
 
-    provengo run --dry C:\Repositories\sqe-system-tesing\Provengo\helloprovengo
+    provengo run --dry C:\Users\reuta\OneDrive\מסמכים\לימודים\שנה ד\איכות\P\2025-mbt-p\selenium\opencart_testing
 
 
 ### Visualize the Spec
 
 Draw the specification in a PDF file.
 
-    provengo analyze -f pdf C:\Repositories\sqe-system-tesing\Provengo\helloprovengo
+    provengo analyze -f pdf C:\Users\reuta\OneDrive\מסמכים\לימודים\שנה ד\איכות\P\2025-mbt-p\selenium\opencart_testing
 
 
 ⚠️ NOTE: This requires [Graphviz](http://graphviz.org) to be installed.
@@ -53,7 +53,7 @@ Draw the specification in a PDF file.
 
 Sample 10 scenarios into a file. The scenarios are stored in a file called `samples.json` (this can be changed using the `-o`/`--output-file` switch).
 
-    provengo sample --overwrite --size 10 C:\Repositories\sqe-system-tesing\Provengo\helloprovengo
+    provengo sample --overwrite --size 10 C:\Users\reuta\OneDrive\מסמכים\לימודים\שנה ד\איכות\P\2025-mbt-p\selenium\opencart_testing
 
 
 ### Create an Optimized Test Suite
@@ -62,19 +62,19 @@ Generate a test suite of 5 tests that provides a good coverage of items in the [
 
 **Requires running `sample` first** (the previous command)**.**
 
-    provengo ensemble --size 5 C:\Repositories\sqe-system-tesing\Provengo\helloprovengo
+    provengo ensemble --size 5 C:\Users\reuta\OneDrive\מסמכים\לימודים\שנה ד\איכות\P\2025-mbt-p\selenium\opencart_testing
 
 #### Visualize the Spec and the Suite
 
 Draw the specification, and highlight the traces in the optimized test suite create by the previous command.
 
-    provengo analyze -f pdf --highlight ensemble.json C:\Repositories\sqe-system-tesing\Provengo\helloprovengo
+    provengo analyze -f pdf --highlight ensemble.json C:\Users\reuta\OneDrive\מסמכים\לימודים\שנה ד\איכות\P\2025-mbt-p\selenium\opencart_testing
 
 ### Create Test Scripts for Third Party Systems
 
 Converts the runs in `ensemble.json` to automation test scripts.
 
-    provengo gen-scripts -s ensemble.json C:\Repositories\sqe-system-tesing\Provengo\helloprovengo
+    provengo gen-scripts -s ensemble.json C:\Users\reuta\OneDrive\מסמכים\לימודים\שנה ד\איכות\P\2025-mbt-p\selenium\opencart_testing
 
 ## AI code completion
 To enable AI code completion, please use a code completion plugin (e.g., [GitHub Copilot](https://github.com/features/copilot)) and keep open the files inside the [config/ai](config/ai) folder.
