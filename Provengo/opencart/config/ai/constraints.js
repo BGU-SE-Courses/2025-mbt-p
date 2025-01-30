@@ -1,5 +1,3 @@
-// @provengo summon constraints
-
 // E cannot happen.
 Constraints.block(E).forever();
 // E cannot happen before F.

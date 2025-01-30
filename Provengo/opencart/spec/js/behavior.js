@@ -1,19 +1,33 @@
 /* @provengo summon selenium */
 
 /**
- * This story opens a new browser window, goes to google.com, and searches for "Pizza".
+ * admin deletes an item from store
  */
-bthread('Search', function () {
-  let s = new SeleniumSession('search').start(URL)
-  composeQuery(s, { text: 'Pizza' })
-  startSearch(s)
-})
+bthread("AdminActions", function () {
+    let session = new SeleniumSession("AdminActions");
+    session.start(URLadmin);
+    login(session);
+    navigateToProducts(session); //products list
+    navigateToProduct(session); //pick iphone
+    deleteProduct(session); //delete iphone
+    Event("AdminActionsCompleted");
 
-/**
- * This story opens a new browser window, goes to google.com, and searches for "Pasta" using the "I Feel Lucky" feature.
+  });
+
+  /**
+ * user buys the item
  */
-bthread('Feeling lucky', function () {
-  let s = new SeleniumSession('lucky').start(URL)
-  composeQuery(s, { text: 'Pasta' })
-  feelLucky(s)
-})
+bthread("UserActions", function () {
+    let session = new SeleniumSession("userActions");
+    session.start(URLstore);
+    addToCart(session);
+    sync({
+      waitForL: Event("AdminActionsCompleted"),  // Wait for admin stuff to finish
+      block: Event("AdminActionsCompleted")      // Block until admin stuff is completed
+    });
+
+    checkout(session);
+  });
+
+
+  //we assume the user already have the item in his cart

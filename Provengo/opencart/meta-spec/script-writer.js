@@ -1,6 +1,6 @@
 /**
-* Generate an index file for the generated test suite/ensemble.
-* Such index file is useful for creating a central location containg test scenario metadata, or
+* Generate a index file for the generated test suite/ensemble.
+* Such index file is useful for creating a central location containing test scenario metadata, or
 * a central script that runs other scripts defined in the main test files.
 * This function is a executed once per gen-script invocation.
 *

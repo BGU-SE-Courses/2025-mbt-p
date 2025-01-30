@@ -65,6 +65,6 @@ function rankByMetGoals( ensemble ) {
     // What percentage of the goals did `ensemble` cover?
     const metGoalsPercent = metGoalsCount/GOALS.length;
 
-    return metGoalsPercent * 100; // convert to human-readable percentage
+    return metGoalsPercent*100; // convert to human-readable percentage
 }
 
